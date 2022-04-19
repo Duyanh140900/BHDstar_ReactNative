@@ -21,27 +21,32 @@ export default class HomeTab extends Component {
     }}
       screenOptions={{
           headerShown:false,
-          tabBarActiveTintColor:'#68ad40',
-          tabBarInactiveTintColor:'#858585',
-          tabBarStyle:{
-            backgroundColor:'#282828',
-            height:50,
-            position:'absolute',
-            width:'90%',
-            justifyContent:"center",
-            marginTop:10,
-            left:17,
-            borderRadius:6,
-            borderTopWidth: 0,
-          },
-          tabBarShowLabel:false,
-          tabBarIndicatorStyle:{
-            width:0
-          },
+          swipeEnabled:false,
+          tabBarIndicatorStyle: {
+                        backgroundColor: "blue",
+                        height: 0,
+                    },
           tabBarContentContainerStyle:{
+                       padding:0,
+                       margin:0,
+                       paddingBottom:15,
+                       justifyContent:"center"
+                    },
+                    tabBarShowLabel:false,
+                    tabBarStyle: {
+                        backgroundColor: '#020200',
+                        height: 60, 
+                        justifyContent:"space-between"
+                    },
 
-          },
-          swipeEnabled:false
+                    tabBarItemStyle: {
+                        width: 160,
+                        height: 40,
+                        justifyContent:"center"
+                    },
+                    tabBarIconStyle:{
+                        width:150
+                    }
       }}
       >
           <Tab.Screen 
@@ -52,19 +57,14 @@ export default class HomeTab extends Component {
               return(
                     <View style={{
                         backgroundColor: focused ? '#4a4a4a' : '#282828',
-                        paddingLeft:150,
+                        width:150,
                         height:40,
-                        position:"absolute",
-                        left:-67,
                         borderRadius:7,
-                        top:-8,
                         color: focused ? '#d9d9d9': '#b2b2b2',
-                        width:30,
                         alignItems:"center",
                         justifyContent:"center",
-                        marginLeft:5
                     }}>
-                        <Text style={{color: focused ? '#d9d9d9': '#b2b2b2',position:"absolute", top:10, right:25}}>Now Showing</Text>
+                        <Text style={{color: focused ? '#d9d9d9': '#b2b2b2',textAlign:"center"}}>Now Showing</Text>
                     </View>
               )
             }
@@ -79,15 +79,14 @@ export default class HomeTab extends Component {
               return(
                     <View style={{
                         backgroundColor: focused ? '#4a4a4a' : '#282828',
-                        paddingLeft:150,
+                        width:150,
                         height:40,
-                        position:"absolute",
-                        left:-70,
                         borderRadius:7,
-                        top:-8,
-                        marginLeft:5
+                        alignItems:"center",
+                        justifyContent:"center"
+
                     }}>
-                        <Text style={{position:"absolute", top:10, right:25, color: focused ? '#d9d9d9': '#b2b2b2'}}>Coming Soon</Text>
+                        <Text style={{textAlign:"center", color: focused ? '#d9d9d9': '#b2b2b2'}}>Coming Soon</Text>
                     </View>
               )
             }

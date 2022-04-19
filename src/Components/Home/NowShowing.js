@@ -20,13 +20,13 @@ export default class NowShowing extends Component {
 
 
   _renderItem = ({ item, index }) => {
-    return <View style={{ marginTop: 70 }}>
+    return <View style={{ marginTop: 0}}>
       <TouchableOpacity onPress={() => this.props.navigation.navigate("Infomation",{item:item})}>
         <ImageBackground
           source={{uri:item.posterUrl}}
           style={{
             width: 180,
-            height: 260,
+            height: Dimensions.get("window").height * 0.36,
             resizeMode: "cover",
             justifyContent: "center",
             alignItems: "center"
@@ -42,7 +42,7 @@ export default class NowShowing extends Component {
     const sliderWidth = Dimensions.get('window').width;
     const itemHeight = Dimensions.get('window').height;
     return (
-      <View style={{ backgroundColor: '#020200',alignItems:"center"}}>
+      <View style={{ backgroundColor: '#020200',alignItems:"center", paddingTop:10}}>
         <Carousel
           ref={(c) => { this._carousel = c; }}
           data={this.state.entries}
@@ -50,7 +50,7 @@ export default class NowShowing extends Component {
           sliderWidth={sliderWidth}
           sliderHeight={200}
           itemWidth={180}
-          itemHeight={260}
+          itemHeight={Dimensions.get("window").height * 0.36}
           onSnapToItem={(index) => this.setState({ activeSlide: index })}
         >
         </Carousel>

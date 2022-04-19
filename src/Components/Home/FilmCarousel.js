@@ -39,7 +39,7 @@ export default function FilmCarousel(navigation) {
         horizontal={true}
         decelerationRate={"normal"}
         snapToInterval={ITEM_WIDTH}
-        style={{ marginTop: 40, paddingHorizontal: 0 }}
+        style={{ paddingHorizontal: 0 }}
         showsHorizontalScrollIndicator={false}
         bounces={false}
         centerContent={true}

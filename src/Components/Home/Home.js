@@ -22,10 +22,9 @@ export default class Home extends Component {
           </TouchableOpacity>
         </View>
         <Slide style={styles.slide} />
-        <View style={{ backgroundColor: 'black', height: '100%', justifyContent: "center" }}>
+        <View style={{ backgroundColor: 'black', height: '80%', justifyContent: "center" }}>
           <HomeTab />
         </View>
-        <Dialog visible={false}></Dialog>
       </View>
     )
   }
@@ -43,6 +42,7 @@ const styles = StyleSheet.create({
   },
   slide: {
     position: "relative",
+    height:"20%"
   },
   navbarRight: {
     position: "absolute",

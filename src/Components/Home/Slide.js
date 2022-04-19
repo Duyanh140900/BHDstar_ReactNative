@@ -17,7 +17,7 @@ export default class Slide extends Component {
       render() {
         return (
             <SliderBox images={this.state.images} 
-                 sliderBoxHeight={160}
+                 sliderBoxHeight={150}
   onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
   dotColor="#fffdff"
   inactiveDotColor="#f3f2f3"

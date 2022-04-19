@@ -21,13 +21,13 @@ export default class ComingSoon extends Component {
 
 
   _renderItem = ({ item, index,  }) => {
-    return <View style={{ marginTop: 70 }}>
+    return <View style={{ marginTop: 0 }}>
       <TouchableOpacity onPress={() => this.props.navigation.navigate("Infomation",{item:item})}>
         <ImageBackground
           source={{uri:item.posterUrl}}
           style={{
             width: 180,
-            height: 260,
+            height: Dimensions.get("window").height * 0.36,
             resizeMode: "cover",
             justifyContent: "center",
             alignItems: "center"
@@ -43,7 +43,7 @@ export default class ComingSoon extends Component {
     const sliderWidth = Dimensions.get('window').width;
     const itemHeight = Dimensions.get('window').height;
     return (
-      <View style={{ backgroundColor: '#020200', height: '100%' }}>
+      <View style={{ backgroundColor: '#020200', height:"100%", paddingTop:10 }}>
         <Carousel
           ref={(c) => { this._carousel = c; }}
           data={this.state.entries}
