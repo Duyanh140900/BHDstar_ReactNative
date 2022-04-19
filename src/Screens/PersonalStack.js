@@ -1,32 +1,30 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Personal from '../Components/Personal/Personal';
-import {Button,StyleSheet} from 'react-native'
-
+import Details from '../Components/Personal/Details';
+import PaymentHistory from '../Components/Personal/PaymentHistory';
+import Edit from '../Components/Personal/Edit';
 
 const Stack = createNativeStackNavigator();
 
-function PersonalStack(props) {
-  const {navigation} = props
+function HomeStack(props) {
   return (
     <>
-      <Button title='Drawer' onPress={() => navigation.openDrawer()}></Button>
       <Stack.Navigator
       screenOptions={{
-          headerShown:false}}
+          headerShown:false}
+          }
+          initialRouteName="Personal"
       >
         <Stack.Screen name="Personal" component={Personal} />
+        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="PaymentHistory" component={PaymentHistory} />
+        <Stack.Screen name="Edit" component={Edit} />
       </Stack.Navigator>
     </>
       
   );
 }
 
-export default PersonalStack;
+export default HomeStack;
 
-const styles = StyleSheet.create({
-  container: {
-      flex:1,
-  }
-})

@@ -7,10 +7,9 @@ export default class Slide extends Component {
         super(props);
         this.state = {
           images: [
-            "https://source.unsplash.com/1024x768/?nature",
-            "https://source.unsplash.com/1024x768/?water",
-            "https://source.unsplash.com/1024x768/?girl",
-            "https://source.unsplash.com/1024x768/?tree", // Network image        // Local image
+            "https://www.bhdstar.vn/wp-content/uploads/2018/03/1920x1080-JJK-combo-1.jpeg",
+            "https://www.bhdstar.vn/wp-content/uploads/2018/03/App.jpg",
+            "https://www.bhdstar.vn/wp-content/uploads/2018/03/Package-U22.png",
           ]
         };
       }
@@ -18,7 +17,7 @@ export default class Slide extends Component {
       render() {
         return (
             <SliderBox images={this.state.images} 
-                 sliderBoxHeight={130}
+                 sliderBoxHeight={160}
   onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
   dotColor="#fffdff"
   inactiveDotColor="#f3f2f3"

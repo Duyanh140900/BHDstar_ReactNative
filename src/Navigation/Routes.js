@@ -1,8 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import TabRoutes from './TabRoutes';
 import CustomDrawer from '../Components/CustomDrawer'
+import PlusStack from '../Screens/PlusStack';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -14,11 +14,17 @@ function Routes() {
     //     {MainStack(Stack)}
     //   </Stack.Navigator>
     <Drawer.Navigator
-      screenOptions={{headerShown:false}}
+      screenOptions={
+        {
+          drawerStyle: {
+            backgroundColor: '#1c1c1c',
+          },
+          headerShown: false
+        }}
       drawerContent={(props) => <CustomDrawer {...props} />}
-      >
-        <Drawer.Screen component={TabRoutes} name={'Home'}/>
-      </Drawer.Navigator>
+    >
+      <Drawer.Screen component={PlusStack} name={'PlusStack'} />
+    </Drawer.Navigator>
   );
 }
 
