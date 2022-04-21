@@ -4,6 +4,8 @@ import Personal from '../Components/Personal/Personal';
 import Details from '../Components/Personal/Details';
 import PaymentHistory from '../Components/Personal/PaymentHistory';
 import Edit from '../Components/Personal/Edit';
+import Home from '../Components/Home/Home';
+import TabRoutes from '../Navigation/TabRoutes';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +22,7 @@ function HomeStack(props) {
         <Stack.Screen name="Details" component={Details} />
         <Stack.Screen name="PaymentHistory" component={PaymentHistory} />
         <Stack.Screen name="Edit" component={Edit} />
+        <Stack.Screen name="TabRoutes" component={TabRoutes} />
       </Stack.Navigator>
     </>
       
