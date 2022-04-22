@@ -31,15 +31,20 @@ export default class Infomation extends Component {
             <View style={{ padding: 20 }}>
               <Text style={styles.title}>{item.title}</Text>
               <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                <View style={{ flex: 1 }}>
-                  <Text style={[styles.info, item.theloai.length > 30 ? { color: 'red' } : { color: '#757574' }]}>
+                <View style={{ flex: 0.7 }}>
+                  <Text
+                    style={[
+                      styles.info,
+                      item.theloai.length > 30 ? { color: 'red', fontSize: 15 } : { color: '#757574', fontSize: 15 },
+                    ]}
+                  >
                     {item.theloai}
                   </Text>
                   <Image style={{ height: 20, width: 60, resizeMode: 'cover' }} source={require('./image/stars.png')} />
                 </View>
-                <View style={{ flexDirection: 'row', marginBottom: 10, flex: 0.4 }}>
-                  <FontAwesome style={{ color: '#575755', paddingRight: 5 }} name="clock-o" size={22}></FontAwesome>
-                  <Text style={styles.info}>{item.thoiluong} minutes</Text>
+                <View style={{ flexDirection: 'row', marginBottom: 10, flex: 0.3 }}>
+                  <FontAwesome style={{ color: '#575755', paddingRight: 5 }} name="clock-o" size={18}></FontAwesome>
+                  <Text style={[styles.info, { fontSize: 13 }]}>{item.thoiluong} minutes</Text>
                 </View>
               </View>
               <View

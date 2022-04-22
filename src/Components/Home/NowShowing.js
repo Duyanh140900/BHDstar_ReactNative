@@ -15,8 +15,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 0,
           title: 'Ê ÔNG GIÀ, YÊU HA',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002420?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/eonggia.jpg'),
           date: [
             {
               id: 0,
@@ -50,8 +49,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 1,
           title: 'SONIC: THE HEDGEHOG 2',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002421?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/sonic.jpg'),
           date: [
             {
               id: 0,
@@ -75,8 +73,7 @@ export default class NowShowing extends Component {
             { id: 2, time: '23', rap: [] },
             { id: 3, time: '24', rap: [] },
           ],
-          infoUrl:
-            'https://movies.sterkinekor.co.za/CDN/media/entity/get/FilmTitleGraphic/HO00002358?referenceScheme=HeadOffice&allowPlaceHolder=true',
+          infoUrl: 'https://image.tmdb.org/t/p/original/8sHqW2AW7y0TAvJbPQdmk1PTDuS.jpg',
           theloai: 'P - PHIM PHỔ BIẾN CHO MỌI LỨA TUỔI',
           ngaychieu: '2022-04-15',
           thoiluong: 122,
@@ -90,8 +87,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 2,
           title: 'MỸ NHÂN THẦN SÁCH',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002423?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/minhan.jpg'),
           date: [
             {
               id: 0,
@@ -125,8 +121,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 3,
           title: 'QUA BỂN LÀM CHI',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002418?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/quaben.jpg'),
           date: [
             { id: 0, time: '21', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Long Khánh'] },
             { id: 1, time: '22', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Discovery'] },
@@ -147,8 +142,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 4,
           title: 'MIDNIGHT',
-          posterUrl:
-            'http://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002415?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/midnight.jpg'),
           date: [
             {
               id: 0,
@@ -182,8 +176,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 5,
           title: 'PEE NAK 3',
-          posterUrl:
-            'http://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002419?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/peenak.jpg'),
           date: [
             { id: 0, time: '21', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Long Khánh'] },
             { id: 1, time: '22', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Discovery'] },
@@ -204,8 +197,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 6,
           title: 'THE ADVENT CALENDAR',
-          posterUrl:
-            'http://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002427?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/hide.jpg'),
           date: [
             { id: 0, time: '21', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Long Khánh'] },
             { id: 1, time: '22', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Discovery'] },
@@ -226,8 +218,7 @@ export default class NowShowing extends Component {
           hide: true,
           id: 7,
           title: 'RUN HIDE FIGHT',
-          posterUrl:
-            'http://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002410?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/run.jpg'),
           date: [
             { id: 0, time: '21', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Long Khánh'] },
             { id: 1, time: '22', rap: ['Lê Văn Việt', 'Quang Trung', 'Thảo Điền', 'Discovery'] },
@@ -270,7 +261,7 @@ export default class NowShowing extends Component {
           }}
         >
           <ImageBackground
-            source={{ uri: item.posterUrl }}
+            source={item.posterUrl}
             style={{
               width: 180,
               height: Dimensions.get('window').height * 0.36,
@@ -280,7 +271,7 @@ export default class NowShowing extends Component {
             }}
             imageStyle={{ borderRadius: 6 }}
           />
-          {this.state.activeSlide === item.id && <Title title={item.title} />}
+          {this.state.activeSlide === item.id && <Title title={item.title} time={item.thoiluong} />}
         </TouchableOpacity>
       </View>
     )

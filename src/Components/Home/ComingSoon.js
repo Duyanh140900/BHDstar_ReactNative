@@ -13,8 +13,7 @@ export default class ComingSoon extends Component {
           hide: false,
           id: 0,
           title: 'DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002422?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/doctor.jpg'),
           infoUrl:
             'https://genk.mediacdn.vn/zoom/700_438/2020/1/10/1-1578672272652747982911-crop-15790857118741765780019.jpg',
           theloai: 'Action',
@@ -30,8 +29,7 @@ export default class ComingSoon extends Component {
           hide: false,
           id: 1,
           title: 'KẺ THỨ BA',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002425?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/kethuba.jpg'),
           infoUrl: 'https://i.ytimg.com/vi/PZRMW9vzN68/maxresdefault.jpg',
           theloai: 'Romantic',
           ngaychieu: '2022-05-13',
@@ -46,8 +44,7 @@ export default class ComingSoon extends Component {
           hide: false,
           id: 2,
           title: 'CHICKEN HARE AND THE HAMSTER OF DARKNESS',
-          posterUrl:
-            'https://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002417?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/chicken.jpg'),
           infoUrl:
             'https://m.media-amazon.com/images/M/MV5BMjkzMDM5NzgtMDgwYi00OGZjLWE4M2UtMDM2ZmU4ZjI4MTU2XkEyXkFqcGdeQXVyMTEwNTM4MDcx._V1_.jpg',
           theloai: 'Animation',
@@ -63,8 +60,7 @@ export default class ComingSoon extends Component {
           hide: false,
           id: 3,
           title: 'FIRE STARTERS',
-          posterUrl:
-            'http://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002430?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/fire.jpg'),
           infoUrl: 'https://i.ytimg.com/vi/AojP3Z5hAII/maxresdefault.jpg',
           theloai: 'Horror',
           ngaychieu: '2022-05-13',
@@ -79,8 +75,7 @@ export default class ComingSoon extends Component {
           hide: false,
           id: 4,
           title: 'TOP GUN MAVERICK',
-          posterUrl:
-            'http://booking.bhdstar.vn/CDN/media/entity/get/FilmPosterGraphic/HO00002439?referenceScheme=HeadOffice&allowPlaceHolder=true&height=500',
+          posterUrl: require('./image/film/topgun.jpg'),
           infoUrl: 'https://i.ytimg.com/vi/giXco2jaZ_4/maxresdefault.jpg',
           theloai: 'Action',
           ngaychieu: '2022-05-27',
@@ -101,7 +96,7 @@ export default class ComingSoon extends Component {
       <View style={{ marginTop: 0 }}>
         <TouchableOpacity onPress={() => this.props.navigation.navigate('Infomation', { item: item })}>
           <ImageBackground
-            source={{ uri: item.posterUrl }}
+            source={item.posterUrl}
             style={{
               width: 180,
               height: Dimensions.get('window').height * 0.36,
@@ -111,7 +106,7 @@ export default class ComingSoon extends Component {
             }}
             imageStyle={{ borderRadius: 6 }}
           />
-          {this.state.activeSlide === item.id && <Title title={item.title} />}
+          {this.state.activeSlide === item.id && <Title title={item.title} time={item.thoiluong} />}
         </TouchableOpacity>
       </View>
     )

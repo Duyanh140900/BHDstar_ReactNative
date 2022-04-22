@@ -21,7 +21,8 @@ export default class TheaterTab extends Component {
           place: 'Tầng B1 & B2, Vincom Plaza Quang Trung, 190 Quang Trung, P.10, Quận Gò Vấp, Tp.HCM',
         },
         {
-          image: 'http://khenphim.com/wp-content/uploads/2017/04/BHD-TD-loi-vao.jpg',
+          image:
+            'https://images.foody.vn/res/g94/938596/prof/s640x400/foody-upload-api-foody-mobile-xem-phim-mien-phi-ta-200427164449.jpg',
           name: 'Thảo Điền',
           place: 'Tầng 5, Vincom Mega Mall Thảo Điền, 159 Xa Lộ Hà Nội, P.Thảo Điền, Quận 2, TPHCM',
         },
@@ -65,7 +66,7 @@ export default class TheaterTab extends Component {
           place: 'Tầng 4, TTTM Garden Shopping Center, Phố Mễ Trì, P.Mỹ Đình 1, Quận Nam Từ Liêm, Hà Nội',
         },
         {
-          image: 'http://bhdstar.vn/wp-content/uploads/2016/11/14958334_360057504339077_682208864_n.jpg',
+          image: 'https://rapchieuphim.com/photos/3/rap-bhd-star-quang-trung.jpg',
           name: 'Phạm Ngọc Thạch',
           place: 'Tầng 8, Vincom Center Phạm Ngọc Thạch, 02 Phạm Ngọc Thạch, P.Trung Tự, Quận Đống Đa, Hà Nội',
         },
